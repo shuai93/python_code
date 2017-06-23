@@ -1,2 +1,4 @@
 # python_code
-code code code
+
+## managemnet 
+### django migrate 初始化数据库
