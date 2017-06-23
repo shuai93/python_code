@@ -1,4 +1,4 @@
 # python_code
 
-## managemnet   
+## management.py   
 * django migrate 初始化数据库
