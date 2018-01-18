@@ -1,7 +1,7 @@
 # python_code
 
 ## aio
-* aio 的一些练习
+* aio 练习
 *
 
 ## django_demo
