@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# @Time    : 18-1-18 上午11:32
+# @Author  : ys
+# @Email   : youngs@yeah.net
+
 import asyncio
 from aio_pika import connect, Message
 
