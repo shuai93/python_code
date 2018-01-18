@@ -1,5 +1,11 @@
 # python_code
 
-## management.py   
-* django migrate 初始化数据库
-* 完成基本数据的功能
+## aio
+* aio 的一些练习
+*
+
+## django_demo
+* 日常django的练习
+
+## docs
+* python 一些小脚本
