@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
+# @Time    : 18-1-18 上午11:32
+# @Author  : ys
+# @Email   : youngs@yeah.net
+
 import re
 import datetime
-
-"""
-
-"""
 
 
 def id_card_check(id_number):
@@ -28,7 +29,9 @@ def id_card_check(id_number):
         return False
     return True
 
+
 if __name__ == '__main__':
-    id_number_list = ['410482198804138128', '342422199103016689', '530121198207183746', '530121198408214246']
+    id_number_list = ['410482198804138128', '342422199103016689',
+                      '530121198207183746', '530121198408214246']
     for id_number in id_number_list:
         print(id_card_check(id_number))
