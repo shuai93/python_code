@@ -3,21 +3,20 @@
 # @Author  : ys
 # @Email   : youngs@yeah.net
 
+"""
+aio_mysql pool 使用方法一
+代码未实际运行
+
+reference https://aiomysql.readthedocs.io/en/latest/
+
+"""
+
 import logging
 import random
 import asyncio
 import re
 from aiomysql import create_pool
 
-
-"""
-aio_mysql pool 使用方法一
-代码未实际运行
-
-reference https://aiomysql.readthedocs.io/en/latest/
-github https://github.com/aio-libs/aiomysql
-
-"""
 
 # 假设mysql表分散在8个host, 每个host有16张子表
 TABLES = {

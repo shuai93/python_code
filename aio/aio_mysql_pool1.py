@@ -3,9 +3,6 @@
 # @Author  : ys
 # @Email   : youngs@yeah.net
 
-import asyncio
-from aiomysql import create_pool
-
 """
 aio_mysql_pool 
 创建 M_POOL 连接池对象
@@ -14,6 +11,10 @@ reference https://aiomysql.readthedocs.io/en/latest/
 github https://github.com/aio-libs/aiomysql
 
 """
+
+
+import asyncio
+from aiomysql import create_pool
 
 
 M_POOL = None

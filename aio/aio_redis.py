@@ -3,17 +3,17 @@
 # @Author  : ys
 # @Email   : youngs@yeah.net
 
-
-import asyncio
-import aioredis
-
-
 """
 aio_redis poll
 reference https://aiomysql.readthedocs.io/en/latest/
 github https://github.com/aio-libs/aioredis
 
 """
+
+
+import asyncio
+import aioredis
+
 
 loop = asyncio.get_event_loop()
 
