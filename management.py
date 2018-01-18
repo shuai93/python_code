@@ -6,8 +6,10 @@ from .models import User, AppUpdate
 from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 
-# django migrate 初始化创建数据库，插入数据
-
+"""
+django migrate 初始化创建数据库，插入数据
+完成django初始化的自动插入数据
+"""
 android = {
 	"platform":"android",
 	"front":"dlr",
