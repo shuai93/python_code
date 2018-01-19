@@ -18,3 +18,7 @@
 > rest_framework 权限管理
 
 > rest_framework api retrieve list create　的使用
+
+> python 注释自动生成文档
+
+> tornado 异步实现 yield
