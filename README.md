@@ -8,3 +8,13 @@
 
 ## docs
 * python 一些小脚本
+
+
+## todo
+> aio rabbitmq rpc调用超时问题
+
+> aio web http auth ....
+
+> rest_framework 权限管理
+
+> rest_framework api retrieve list create　的使用
