@@ -9,6 +9,13 @@ aio mongo
 reference http://motor.readthedocs.io/en/stable/tutorial-asyncio.html
 
 查询语法类似 pymongo
+
+# 批量更新
+db.User.find().forEach(
+   function(item){                
+       db.User.update({"_id":item._id},{"$set":{"LastUpdate":item.CreateAt}},false,true)
+    }
+)
 """
 
 import asyncio
