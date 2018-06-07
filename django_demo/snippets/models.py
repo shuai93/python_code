@@ -18,8 +18,7 @@ class Snippet(models.Model):
     class Meta:
         ordering = ('created',)
 
-class AppUpdate(models.Model):
-    pass
 
 class User(models.Model):
-    pass
+    name = models.CharField(max_length=100, blank=True, default='')
+    passwd = models.CharField(max_length=100, blank=True, default='')
