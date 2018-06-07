@@ -2,12 +2,11 @@ from functools import wraps
 import logging
 
 def decorator(func):
-
     @wraps(func)
     def wraps(*args, **kwargs):
         print("decorator")
         return func(*args, **kwargs)
-
+    return wraps
 
 
 def logged(level, name=None, message=None):

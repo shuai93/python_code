@@ -17,3 +17,9 @@ class Snippet(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+class AppUpdate(models.Model):
+    pass
+
+class User(models.Model):
+    pass
