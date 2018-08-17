@@ -1,4 +1,4 @@
-#!/usr/bin/env python3  
+#!/usr/bin/env python3
 # @Time    : 18-2-5 上午11:21
 # @Author  : ys
 # @Email   : youngs@yeah.net
@@ -21,7 +21,7 @@ async def test(request: HttpRequest):
 
 
 @app.route("/redirect")
-async def test(request: HttpRequest):
+async def test1(request: HttpRequest):
     url = app.url_for('SimpleView')
     return redirect(url)
 
@@ -36,25 +36,28 @@ def post_json(request):
         'type': test_file.type,
     }
     print(file_parameters)
-    return json({"received": True, "file_names": request.files.keys(), "test_file_parameters": file_parameters})
+    return json({
+        "received": True,
+        "file_names": request.files.keys(),
+        "test_file_parameters": file_parameters
+    })
 
 
 class SimpleView(HTTPMethodView):
-
     def get(self, request):
-      return text('I am get methodGGGGGGGGGGGGGg')
+        return text('I am get methodGGGGGGGGGGGGGg')
 
     def post(self, request):
-      return text('I am post method')
+        return text('I am post method')
 
     def put(self, request):
-      return text('I am put method')
+        return text('I am put method')
 
     def patch(self, request):
-      return text('I am patch method')
+        return text('I am patch method')
 
     def delete(self, request):
-      return text('I am delete method')
+        return text('I am delete method')
 
 
 app.add_route(SimpleView.as_view(), '/')
