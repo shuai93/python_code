@@ -4,7 +4,6 @@ from vibora.router import RouterStrategy
 from vibora.static import StaticHandler
 from vibora.schemas import Schema
 
-
 import asyncio
 import os
 
@@ -21,10 +20,8 @@ app = Vibora(
         paths=[static_dirs],
         # host='static.vibora.io',
         url_prefix='/static',
-        max_cache_size=1 * 1024 * 1024
-    ),
-    template_dirs=[template_dirs]
-)
+        max_cache_size=1 * 1024 * 1024),
+    template_dirs=[template_dirs])
 
 
 class SimpleSchema(Schema):
@@ -43,13 +40,8 @@ async def home():
 
 
 @app.route("/home", methods=['GET'])
-async def home():
+async def home2():
     return Response(b'123')
-
-
-@app.route('/<page_id>')
-async def page(page_id: int):
-    return Response(f'Page {page_id}'.encode())
 
 
 @app.route('/api')
@@ -65,8 +57,9 @@ async def home1():
             yield str(x).encode()
             await asyncio.sleep(0.5)
         print('StreamingResponse stop ')
-        
-    return StreamingResponse(stream_builder, chunk_timeout=5, complete_timeout=30)
+
+    return StreamingResponse(
+        stream_builder, chunk_timeout=5, complete_timeout=30)
 
 
 @app.route('/page/<page_id>')
