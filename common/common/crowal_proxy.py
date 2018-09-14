@@ -39,10 +39,14 @@ def parser_html(html: str) -> dict:
 
 def verify_proxy(proxy: str) -> bool:
     url = "http://www.baidu.com"
-    res = requests.get(url)
-    if res.status_code == 200:
-        return True
-    else:
+    try:
+        res = requests.get(url, proxies=proxy)
+        if res.status_code == 200:
+            return True
+        else:
+            return False
+    except Exception as e:
+        print(e)
         return False
 
 def main():
